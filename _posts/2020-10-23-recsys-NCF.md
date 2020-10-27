@@ -1,9 +1,9 @@
 ---
-title: BPR: Bayesian Personalized Ranking from Implicit Feedback (2009)
+title: Neural Collaborative Filtering (2017)
 author: Junho Kim
 date: 2020-10-23 00:00:00 +0800
 categories: [Paper_review, rec_sys]
-tags: [rec_sys, bayesian]
+tags: [rec_sys, deep_learning]
 math: true
 ---
 
