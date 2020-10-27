@@ -5,7 +5,6 @@ date: 2019-10-27 00:00:00 +0800
 categories: [Paper_review, rec_sys]
 tags: [rec_sys, ]
 math: true
-image:
 ---
 
 ## Link
