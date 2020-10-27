@@ -1,36 +1,35 @@
 ---
 title: Neural Collaborative Filtering (2017)
 author: Junho Kim
-date: 2020-10-23 00:00:00 +0800
+date: 2020-10-24 00:10:30 +0800
 categories: [Paper_review, rec_sys]
 tags: [rec_sys, deep_learning]
 math: true
 ---
 
 ## Link
-- paper: https://arxiv.org/pdf/1205.2618.pdf
-- code :
+- paper: <https://arxiv.org/pdf/1205.2618.pdf>
+- code : <https://github.com/hexiangnan/neural_collaborative_filtering>
+
 ---
 
-# Abstract
+## Summary
+> 목표: Implicit feedback 기반의 item 추천
+> 방법: NCF Framework = Generalized Matrix Factorization + Multi-Layer Perceptron
+> 결과: Outperform than BPR, eALS, KNN, ...
 
-- 아이템 추천은
-	- sub item 1
-	- sub item 2
+---
 
+## Abstract
+- 최근 DNN은 다양한 분야에서 큰 성공을 거뒀지만, 추천 시스템 분야에서의 DNN 시도는 상대적으로 적음
+- 기존의 MF의 inner product를 neural architecture로 대체하는 NCF 프레임워크를 제시함
 - item 2
 
+---
 
-### Ordered list
-
-1. first item
-2. second item
-3. third item
+## 1. Introduction
 
 
-## Block Quote
-
-> This line to shows the Block Quote.
 
 ## Tables
 
@@ -40,9 +39,7 @@ math: true
 | Island Trading               | Helen Bennett    | UK      |
 | Magazzini Alimentari Riuniti | Giovanni Rovelli | Italy   |
 
-## Link
 
-<http://127.0.0.1:4000>
 
 
 ## Footnote
@@ -92,90 +89,7 @@ When \\(a \ne 0\\), there are two solutions to \\(ax^2 + bx + c = 0\\) and they 
 
 $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 
-## Code Snippet
 
-### Common
-
-```
-This is a common code snippet, without syntax highlight and line number.
-```
-
-### Specific Languages
-
-#### Console
-
-```console
-$ date
-Sun Nov  3 15:11:12 CST 2019
-```
-
-
-#### Terminal
-
-```terminal
-$ env |grep SHELL
-SHELL=/usr/local/bin/bash
-PYENV_SHELL=bash
-```
-
-#### Ruby
-
-```ruby
-def sum_eq_n?(arr, n)
-  return true if arr.empty? && n == 0
-  arr.product(arr).reject { |a,b| a == b }.any? { |a,b| a + b == n }
-end
-```
-
-#### Shell
-
-```shell
-if [ $? -ne 0 ]; then
-    echo "The command was not successful.";
-    #do the needful / exit
-fi;
-```
-
-#### Liquid
-
-{% raw %}
-```liquid
-{% if product.title contains 'Pack' %}
-  This product's title contains the word Pack.
-{% endif %}
-```
-{% endraw %}
-
-#### HTML
-
-```html
-<div class="sidenav">
-  <a href="#contact">Contact</a>
-  <button class="dropdown-btn">Dropdown
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-container">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-  <a href="#contact">Search</a>
-</div>
-```
-
-**Horizontal Scrolling**
-
-```html
-<div class="panel-group">
-  <div class="panel panel-default">
-    <div class="panel-heading" id="{{ category_name }}">
-      <i class="far fa-folder"></i>
-      <p>This is a very long long long long long long long long long long long long long long long long long long long long long line.</p>
-      </a>
-    </div>
-  </div>
-</div>
-```
 
 
 ## Reverse Footnote
