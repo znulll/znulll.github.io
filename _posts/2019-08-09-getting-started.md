@@ -18,7 +18,7 @@ $ git clone https://github.com/USERNAME/USERNAME.github.io.git -b master --singl
 
 ### Setting up the local envrionment
 
-If you would like to run or build the project on your local machine, please follow the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of `Ruby`, `RubyGems` and `Bundler`. 
+If you would like to run or build the project on your local machine, please follow the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of `Ruby`, `RubyGems` and `Bundler`.
 
 Before running or building for the first time, please complete the installation of the Jekyll plugins. Go to the root directory of project and run:
 
@@ -72,7 +72,7 @@ What it does is:
     - files under `_posts`
     - folder `docs`
 
-2. If you use the `--no-gh` option, the directory `.github` will be deleted. Otherwise, setup the GitHub Action workflow by removing extension `.hook` of `.github/workflows/pages-deploy.yml.hook`, and then remove the other files and directories in folder `.github`. 
+2. If you use the `--no-gh` option, the directory `.github` will be deleted. Otherwise, setup the GitHub Action workflow by removing extension `.hook` of `.github/workflows/pages-deploy.yml.hook`, and then remove the other files and directories in folder `.github`.
 
 3. Automatically create a commit to save the changes.
 
@@ -149,3 +149,415 @@ $ docker run --rm -it \
 ```
 
 Unless you specified the output path, the generated site files will be placed in folder `_site` of the project's root directory. Now you should upload those files to your web server.
+
+
+This post is to show Markdown syntax rendering on [**Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/fork), you can also use it as an example of writing. Now, let's start looking at text and typography.
+
+
+## Titles
+
+---
+
+# H1
+
+<h2 data-toc-skip>H2</h2>
+
+<h3 data-toc-skip>H3</h3>
+
+<h4>H4</h4>
+
+---
+
+## Paragraph
+
+I wandered lonely as a cloud
+
+That floats on high o'er vales and hills,
+
+When all at once I saw a crowd,
+
+A host, of golden daffodils;
+
+Beside the lake, beneath the trees,
+
+Fluttering and dancing in the breeze.
+
+## List
+
+### Ordered list
+
+1. first item
+2. second item
+3. third item
+
+### Unordered list
+
+- item 1
+	- sub item 1
+	- sub item 2
+
+- item 2
+
+## Block Quote
+
+> This line to shows the Block Quote.
+
+## Tables
+
+| Company                      | contact          | Country |
+|:-----------------------------|:-----------------|--------:|
+| Alfreds Futterkiste          | Maria Anders     | Germany |
+| Island Trading               | Helen Bennett    | UK      |
+| Magazzini Alimentari Riuniti | Giovanni Rovelli | Italy   |
+
+## Link
+
+<http://127.0.0.1:4000>
+
+
+## Footnote
+
+Click the hook will locate the footnote[^footnote].
+
+
+## Images
+
+By default, the image is centered and the image caption can be displayed at the bottom:
+
+![Desktop View](/assets/img/sample/mockup.png)
+_Full screen width and center alignment_
+
+You can change the size of the picture:
+
+![Desktop View](/assets/img/sample/mockup.png){: width="400"}
+_400px image width_
+
+In addition, you can use class `normal` , `left` and `right` to specify the image position (but in these case, the image caption is prohibited), for example:
+
+- Normal position
+
+  ![Desktop View](/assets/img/sample/mockup.png){: width="350" class="normal"}
+
+- Float to the left
+
+  ![Desktop View](/assets/img/sample/mockup.png){: width="240" class="left"}
+  "A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space."
+
+- Float to the right
+
+  ![Desktop View](/assets/img/sample/mockup.png){: width="240" class="right"}
+  "A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space."
+
+## Inline code
+
+This is an example of `Inline Code`.
+
+## Mathematics
+
+The mathematics powered by [**MathJax**](https://www.mathjax.org/):
+
+$$ \sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6} $$
+
+When \\(a \ne 0\\), there are two solutions to \\(ax^2 + bx + c = 0\\) and they are
+
+$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+
+## Code Snippet
+
+### Common
+
+```
+This is a common code snippet, without syntax highlight and line number.
+```
+
+### Specific Languages
+
+#### Console
+
+```console
+$ date
+Sun Nov  3 15:11:12 CST 2019
+```
+
+
+#### Terminal
+
+```terminal
+$ env |grep SHELL
+SHELL=/usr/local/bin/bash
+PYENV_SHELL=bash
+```
+
+#### Ruby
+
+```ruby
+def sum_eq_n?(arr, n)
+  return true if arr.empty? && n == 0
+  arr.product(arr).reject { |a,b| a == b }.any? { |a,b| a + b == n }
+end
+```
+
+#### Shell
+
+```shell
+if [ $? -ne 0 ]; then
+    echo "The command was not successful.";
+    #do the needful / exit
+fi;
+```
+
+#### Liquid
+
+{% raw %}
+```liquid
+{% if product.title contains 'Pack' %}
+  This product's title contains the word Pack.
+{% endif %}
+```
+{% endraw %}
+
+#### HTML
+
+```html
+<div class="sidenav">
+  <a href="#contact">Contact</a>
+  <button class="dropdown-btn">Dropdown
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+  <a href="#contact">Search</a>
+</div>
+```
+
+**Horizontal Scrolling**
+
+```html
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading" id="{{ category_name }}">
+      <i class="far fa-folder"></i>
+      <p>This is a very long long long long long long long long long long long long long long long long long long long long long line.</p>
+      </a>
+    </div>
+  </div>
+</div>
+```
+
+
+## Reverse Footnote
+
+[^footnote]: The footnote source.
+
+
+## Naming and Path
+
+Create a new file named `YYYY-MM-DD-TITLE.EXTENSION` and put it in the `_post/` of the root directory. Please note that the `EXTENSION` must be one of `md` and `markdown`. From `v2.4.1`, you can create sub-directories under `_posts/` to categorize posts.
+
+## Front Matter
+
+Basically, you need to fill the [Front Matter](https://jekyllrb.com/docs/front-matter/) as below at the top of the post:
+
+```yaml
+---
+title: TITLE
+date: YYYY-MM-DD HH:MM:SS +/-TTTT
+categories: [TOP_CATEGORIE, SUB_CATEGORIE]
+tags: [TAG]     # TAG names should always be lowercase
+---
+```
+
+> **Note**: The posts' ***layout*** has been set to `post` by default, so there is no need to add the variable ***layout*** in Front Matter block.
+
+### Timezone of date
+
+In order to accurately record the release date of a post, you should not only setup the `timezone` of `_config.yml` but also provide the the post's timezone in field `date` of its Front Matter block. Format: `+/-TTTT`, e.g. `+0800`.
+
+### Categories and Tags
+
+The `categories` of each post is designed to contain up to two elements, and the number of elements in `tags` can be zero to infinity.
+
+The list of posts belonging to the same *category*/*tag* is recorded on a separate page. At the same time, the number of these *category*/*tag* type pages is equal to the number of `categories` / `tags` elements for all posts, which means that the two number must be exactly the same.
+
+For instance, let's say there is a post with front matter:
+
+```yaml
+categories: [Animal, Insect]
+tags: bee
+```
+
+Then we should have two *category* type pages placed in folder `categories` of root and one *tag* type page placed in folder `tags`  of root:
+
+```sh
+.
+├── categories
+│   ├── animal.html         # a category type page
+│   └── insect.html
+├── tags
+│   └── bee.html            # a tag type page
+...
+```
+
+and the content of a *category* type page is
+
+```yaml
+---
+layout: category
+title: CATEGORY_NAME        # e.g. Insect
+category: CATEGORY_NAME     # e.g. Insect
+---
+```
+
+the content of a *tag* type page is
+
+```yaml
+---
+layout: tag
+title: TAG_NAME             # e.g. bee
+tag: TAG_NAME               # e.g. bee
+---
+```
+
+With the increasing number of posts, the number of categories and tags will increase several times!  If we still manually create these *category*/*tag* type files, it will obviously be a super time-consuming job, and it is very likely to miss some of them, i.e., when you click on the missing `category` or `tag` link from a post or somewhere, the browser will complain to you "404 Not Found". The good news is we got a lovely script tool `_scripts/sh/create_pages.sh` to finish the boring tasks. Basically we will use it through `run.sh`, `build.sh` or `deploy.sh` that placed in `tools/` instead of running it separately. Check out its use case [here]({{ "/posts/getting-started/#deployment" | relative_url }}).
+
+## Last modified date
+
+The last modified date of a post is obtained according to the post's latest git commit date, and the modified date of all posts are designed to be stored in the file `_data/updates.yml`. Then contents of that file may be as follows:
+
+```yaml
+-
+  filename: getting-started             # the post filename without date and extension
+  lastmod: 2020-04-13 00:38:56 +0800    # the post last modified date
+-
+  ...
+```
+
+You can choose to create this file manually, But the better approach is to let it be automatically generated by a script tool, and `_scripts/sh/dump_lastmod.sh` was born for this! Similar to the other script (`create_pages.sh`) mentioned above, it is also be called from the other superior tools, so it doesn't have to be used separately.
+
+When some posts have been modified since their published date and also the file `_data/updates.yml` was created correctly, a list with the label **Recent Updates** will be displayed in the right panel of the desktop view, which records the five most recently modified posts.
+
+## Table of Contents
+
+By default, the **T**able **o**f **C**ontents (TOC) is displayed on the right panel of the post. If you want to turn it off globally, go to `_config.yml` and set the value of variable `toc` to `false`. If you want to turn off TOC for specific post, add the following to post's [Front Matter](https://jekyllrb.com/docs/front-matter/):
+
+```yaml
+---
+toc: false
+---
+```
+
+
+## Comments
+
+Similar to TOC, the [Disqus](https://disqus.com/) comments is loaded by default in each post, and the global switch is defined by variable `comments` in file `_config.yml` . If you want to close the comment for specific post, add the following to the **Front Matter** of the post:
+
+```yaml
+---
+comments: false
+---
+```
+
+
+## Mathematics
+
+For website performance reasons, the mathematical feature won't be loaded by default. But it can be enabled by:
+
+```yaml
+---
+math: true
+---
+```
+
+## Preview Image
+
+If you want to add an image to the top of the post contents, specify the url for the image by:
+
+```yaml
+---
+image: /path/to/image-file
+---
+```
+
+## Pinned Posts
+
+You can pin one or more posts to the top of the home page, and the fixed posts are sorted in reverse order according to their release date. Enable by:
+
+```yaml
+---
+pin: true
+---
+```
+
+## Code Block
+
+Markdown symbols <code class="highlighter-rouge">```</code> can easily create a code block as following examples.
+
+```
+This is a common code snippet, without syntax highlight and line number.
+```
+
+## Specific Language
+
+Using <code class="highlighter-rouge">```language</code> you will get code snippets with line numbers and syntax highlight.
+
+> **Note**: The Jekyll style `{% raw %}{%{% endraw %} highlight LANGUAGE {% raw %}%}{% endraw %}` or `{% raw %}{%{% endraw %} highlight LANGUAGE linenos {% raw %}%}{% endraw %}` are not allowed to be used in this theme !
+
+```yaml
+# Yaml code snippet
+items:
+    - part_no:   A4786
+      descrip:   Water Bucket (Filled)
+      price:     1.47
+      quantity:  4
+```
+
+### Liquid Codes
+
+If you want to display the **Liquid** snippet, surround the liquid code with `{% raw %}{%{% endraw %} raw {%raw%}%}{%endraw%}` and `{% raw %}{%{% endraw %} endraw {%raw%}%}{%endraw%}` .
+
+{% raw %}
+```liquid
+{% if product.title contains 'Pack' %}
+  This product's title contains the word Pack.
+{% endif %}
+```
+{% endraw %}
+
+## Learn More
+
+For more knowledge about Jekyll posts, visit the [Jekyll Docs: Posts](https://jekyllrb.com/docs/posts/).
+
+
+In [**Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/), the image files of [Favicons](https://www.favicon-generator.org/about/) are placed in `assets/img/favicons/`. You may need to replace them with your own. So let's see how to customize these Favicons.
+
+With a square image (PNG, JPG or GIF) in hand, open the site [*Favicon & App Icon Generator*](https://www.favicon-generator.org/) and upload your original image.
+
+![upload-image](/assets/img/sample/upload-image.png)
+
+Click button <kbd>Create Favicon</kbd> and wait a moment for the website to generate the icons of various sizes automatically.
+
+![download-icons](/assets/img/sample/download-icons.png){: width="600"}
+
+Download the generated package, unzip and delete the following two from the extracted files:
+
+- browserconfig.xml
+- manifest.json
+
+Now, copy the remaining image files (`.PNG` and `.ICO`) from the extracted `.zip` file to cover the original files in the folder `assets/img/favicons/`.
+
+The following table helps you understand the changes to the icon file:
+
+> ✓ means keep, ✗ means delete.
+
+| File(s)             | From Favicon & App Icon Generator | From Chirpy |
+|---------------------|:---------------------------------:|:-----------:|
+| `*.PNG`             | ✓                                 | ✗           |
+| `*.ICO`             | ✓                                 | ✗           |
+| `browserconfig.xml` | ✗                                 | ✓           |
+| `manifest.json`     | ✗                                 | ✓           |
+
+
+The next time you build the site, the icon will be replaced with a customized edition.
