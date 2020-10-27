@@ -1,5 +1,5 @@
 ---
-title: [Paper review] BPR: Bayesian Personalized Ranking from Implicit Feedback (2009)
+title: BPR: Bayesian Personalized Ranking from Implicit Feedback (2009)
 author: Junho Kim
 date: 2019-10-27 00:00:00 +0800
 categories: [Paper_review, rec_sys]
