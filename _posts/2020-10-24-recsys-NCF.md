@@ -15,8 +15,8 @@ math: true
 
 ## Summary
 > 목표: Implicit feedback 기반의 item 추천
-> 방법: NCF Framework = Generalized Matrix Factorization + Multi-Layer Perceptron
-> 결과: Outperform than BPR, eALS, KNN, ...
+  방법: NCF Framework = Generalized Matrix Factorization + Multi-Layer Perceptron
+  결과: Outperform than BPR, eALS, KNN, ...
 
 ---
 
